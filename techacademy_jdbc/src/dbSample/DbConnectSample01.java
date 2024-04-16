@@ -37,8 +37,11 @@ public class DbConnectSample01 {
             while( rs.next() ){
                 // Name列の値を取得
                 String name = rs.getString("Name");
+                // Population列の値を取得 　← 追記
+                int population = rs.getInt("Population");  // ← 追記
                 // 取得した値を表示
                 System.out.println(name);
+                System.out.println(population);   // ← 追記
             }
 
         } catch (ClassNotFoundException e) {
